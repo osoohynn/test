@@ -1753,5 +1753,712 @@ if K <= len(d):
 else:
     print(0)'''
 
+'''import calendar as c
+
+weekday_d = {0:'월', 1:'화', 2:'수', 3:'목', 4:'금', 5:'토', 6:'일'}
+y, m, d = map(int, input().split('.'))
+day = c.weekday(y,m,d)
+
+if y == 2024 and 4<= m <= 6:
+    print(f"{y}년{m}일{d}일은 {weekday_d[day]}요일 입니다.")
+    print('방과후 수업 0')
+else:
+    print("해당 일은 방과 후 운영기간이 아닙니다.")'''
+
+'''S1 = 0
+S2 = 0
+S3 = 0
+a = 3
+
+n = int(stdin.readline())
+for i in range(n):
+    k = int(stdin.readline())
+    S1 += k
+
+
+n = int(stdin.readline())
+for i in range(n):
+    k = int(stdin.readline())
+    S2 += k
+
+
+n = int(stdin.readline())
+for i in range(n):
+    k = int(stdin.readline())
+    S3 += k
+
+
+# print(S1)
+# print(S2)
+# print(S3)
+
+if S1>0:
+    print('+')
+elif S1==0:
+    print('0')
+else:
+    print('-')
+
+if S2>0:
+    print('+')
+elif S2==0:
+    print('0')
+else:
+    print('-')
+
+if S3>0:
+    print('+')
+elif S3==0:
+    print('0')
+else:
+    print('-')'''
+
+'''S = input()
+
+sn = len(S)
+
+if 'c=' in S:
+    sn -= 1
+if 'c-' in S:
+    sn -= 1
+if 'dz=' in S:
+    sn -= 1
+if 'd-' in S:
+    sn -= 1
+if 'lj' in S:
+    sn -= 1
+if 'nj' in S:
+    sn -= 1
+if 's=' in S:
+    sn -= 1
+if 'z=' in S:
+    sn -= 1
+
+print(sn)'''
+'''
+while True:
+    n = input()
+    if int(n) == 0:
+        break
+
+    s = len(n)-1 +2
+
+    for i in range(len(n)):
+        if n[i] == '1':
+            s += 2
+        elif n[i] == '0':
+            s += 4
+        else:
+            s += 3
+
+    print(s)'''
+
+'''wdl = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+w = input()
+
+for i in wdl:
+    w = w.replace(i, '8')
+print(len(w))'''
+
+'''word = input().upper()
+w_l = list(set(word))
+c_l = []
+
+for i in w_l:
+    count = word.count(i)
+    c_l.append(count)
+
+if c_l.count(max(c_l))>=2:
+    print('?')
+else:
+    print(w_l[c_l.index(max(c_l))])'''
+
+'''me = input()
+d = input()
+
+if len(me) > len(d):
+    print('go')
+else:
+    print('no')'''
+
+"""print('''NFC West       W   L  T
+-----------------------
+Seattle        13  3  0
+San Francisco  12  4  0
+Arizona        10  6  0
+St. Louis      7   9  0
+
+NFC North      W   L  T
+-----------------------
+Green Bay      8   7  1
+Chicago        8   8  0
+Detroit        7   9  0
+Minnesota      5  10  1''')"""
+
+'''import datetime
+print(str(datetime.datetime.now())[:10])'''
+
+'''
 n = int(input())
-print(n%5+1)
+
+if n%5==0:
+    print(n//5)
+else:
+    print(n//5+1)'''
+
+'''a, b = map(int, input().split())
+print(b-a, b)'''
+
+'''s = input()
+
+if s == 'n' or s== 'N':
+    print('Naver D2')
+else:
+    print('Naver Whale')'''
+
+'''s = input()
+cnt = 0
+
+for i in s:
+    if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i== 'u':
+        cnt += 1
+print(cnt)'''
+
+'''while True:
+    s = input()
+    if s == 'END':
+        break
+    print(s[::-1])'''
+'''a = input()
+b = input()
+print(a+b)'''
+
+'''money = int(input())
+cnt = 0
+for i in range(9):
+    cnt += int(input())
+
+print(money-cnt)'''
+
+'''n = int(input())
+
+for i in range(n):
+    m = int(input())
+    print('='*m)'''
+
+'''cnt = 0
+jh = input()
+n = int(input())
+
+for i in range(n):
+    m = input()
+    if jh == m:
+        cnt += 1
+
+print(cnt)'''
+
+'''print(530000+1920000+149000)'''
+
+'''a, b, c = map(int, input().split())
+print(3*(b//a)*c)'''
+'''
+n = int(input())
+
+for i in range(n):
+    a = input()
+    if 6<= len(a) <= 9:
+        print('yes')
+    else:
+        print('no')'''
+
+'''a, b = map(int, input().split())
+if b == 1 or not(12<=a<=16):
+    print(280)
+else:
+    print(320)'''
+
+'''n = int(input())
+d = 1
+for i in range(1, n+1):
+    d *= i
+print(d)'''
+
+'''n, m = map(int, input().split())
+
+if n*100>=m:
+    print('Yes')
+else:
+    print('No')'''
+
+'''s = input()
+
+if s == 'NLCS':
+    print('North London Collegiate School')
+elif s == 'BHA':
+    print('Branksome Hall Asia')
+elif s == 'KIS':
+    print('Korea International School')
+elif s == 'SJA':
+    print('St. Johnsbury Academy')'''
+
+'''n, a, b = map(int, input().split())
+
+if n <= b:
+    if a>b:
+        print('Subway')
+    elif a<b:
+        print('Bus')
+    elif a == b:
+        print('Anything')
+else:
+    print('Bus')'''
+
+'''s = input()
+
+if s == 'M':
+    print('MatKor')
+elif s == 'W':
+    print('WiCys')
+elif s == 'C':
+    print('CyKor')
+elif s == 'A':
+    print('AlKor')
+elif s == '$':
+    print('$clear')'''
+
+'''a, b, c, d, e = map(int, input().split())
+
+print(a*b-c*d*e)'''
+
+'''a, b =map(int,input().split())
+print(a*b/2)'''
+'''
+n = int(input())
+for i in range(n):
+    a,b,x = map(int, input().split())
+    print(a*(x-1))'''
+
+'''b = int(input())
+print(b*10//11)'''
+
+'''a, b = map(int, input().split())
+y = a * b
+q, w, e, r, t = map(int, input().split())
+print(q-y, w-y, e-y, r-y, t-y)'''
+
+'''n = int(input())
+for i in range(1,n+1):
+    a = input()
+    print(f"{i}. {a}")'''
+
+'''s,t,d = map(int, input().split())
+y = d//(s*2)
+print(y*t)'''
+
+'''a, b = map(int, input().split())
+c, d = map(int, input().split())
+
+if a+d <= b+c:
+    print(a+d)
+else:
+    print(b+c)'''
+
+'''a, b, c = map(int, input().split())
+
+if a*b/c >= a/b*c:
+    print(int(a*b/c))
+else:
+    print(int(a/b*c))'''
+
+'''s = list(input())
+for i in s:
+    i = int(i)
+s.sort()
+s.reverse()
+for i in s:
+    print(i, end="")'''
+
+'''a = list(map(int, input().split()))
+a.sort()
+print(a[1])'''
+
+'''t = int(input())
+for i in range(t):
+    g = int(input())
+    if g%2 == 0:
+        print('cubelover')
+    else:
+        print('koosaga')'''
+
+'''n = int(input())
+d = 1
+for i in range(1, n+1):
+    d *= i
+for i in range(len(str(d))-1,-1, -1):
+    if str(d)[i]!='0':
+        print(str(d)[i])
+        break'''
+
+'''d = ['Soongsil',"Korea", 'Hanyang']
+a = list(map(int, input().split()))
+t = d[a.index(min(a))]
+
+if sum(a) >=100 :
+    print('OK')
+else:
+    print(t)'''
+
+'''i = 0
+while True:
+    a = int(input())
+    if a == -1:
+        break
+    i += a
+print(i)'''
+
+'''sm = 0
+for i in range(4):
+    o = int(input())
+    sm += o
+print(sm//60)
+print(sm%60)'''
+
+'''g = list(map(int, input().split()))
+s = list(map(int, input().split()))
+
+if sum(g)>=sum(s):
+    print(sum(g))
+else:
+    print(sum(s))'''
+
+'''a = int(input())
+r = input()
+b = int(input())
+
+if r == '+':
+    print(a+b)
+elif r == '*':
+    print(a*b)'''
+
+'''while True:
+    s = input()
+    if s == '***':
+        break
+    print(s[::-1])'''
+
+'''s = 'Monty Python'
+
+print(s[-4:-1])
+
+evennumbers = [2, 4, 6, 8, 10]
+oddnumbers = [1, 3, 5, 7, 9]
+
+numbers = evennumbers + oddnumbers
+print(numbers)
+print(numbers * 4)'''
+
+'''date = '2024-04-30'
+
+day = date[-2:]
+print(day)'''
+
+'''l = [10, 20, 30, 40, 50]
+
+t = int(input())
+for i in range(t):
+    a, b, c = map(int, input().split())
+    if a == 1:
+        l.insert(b, c)
+        print(l)
+    elif a == 2:
+        l.pop(b)
+        print(l)'''
+
+'''name = input()
+nu1,nu2 = input().split('-')
+year = 0
+gender = ''
+
+if nu2[0] == '1' or nu2[0] == '2':
+    year = 1900+int(nu1[:2])
+elif nu2[0] == '3' or nu2[0] == '3':
+    year = 2000+int(nu1[:2])
+
+if nu2[0] == '1' or nu2[0] == '3':
+    gender = '남자'
+elif nu2[0] == '2' or nu2[0] == '4':
+    gender = '여자'
+
+print(f"{name[0]} {name[1:]} {year}년
+ {nu1[2:4]}월 {nu1[4:6]}일 {gender}")'''
+
+
+'''date = '2023-03-30'
+date = date.split('0')
+print(date)'''
+
+'''date = '2023-03-30'
+print(date.split('-')[1])'''
+
+'''c, h = input().split('H')
+print(int(c[1:])*12+int(h))'''
+
+
+'''while True:
+    a, b = map(int, input().split())
+    if a == 0 and b == 0:
+        break
+    print(a+b)'''
+
+'''a, b, c = map(int, input().split())
+if a*b-c>=0:
+    print(a*b-c)
+else:
+    print(0)'''
+
+'''h, m, s = map(int, input().split())
+t = int(input())
+
+h += t//3600
+m += t//60-t//3600*60
+s += t%60
+
+if s>= 60:
+    s -= 60
+    m += 1
+if m >= 60:
+    m -= 60
+    h += 1
+if h >= 24:
+    h %= 24
+
+print(h, m, s)'''
+
+'''al = [0]*26
+
+s = input()
+
+for i in s:
+    al[ord(i)-97]+=1
+
+for i in al:
+    print(i, end=" ")'''
+
+'''sm = 0
+sl = []
+cl = []
+for i in range(4):
+    s = int(input())
+    sm += s
+    sl.append(s)
+for i in range(2):
+    s = int(input())
+    sm += s
+    cl.append(s)
+
+print(sm-min(sl)-min(cl))'''
+
+'''a, b = map(int,input().split())
+
+for i in range(a):
+    s = list(input())
+    s.reverse()
+
+    for i in s:
+        print(i, end="")
+    print()'''
+
+'''a = list(map(int, input().split()))
+b = min(a)+max(a)
+a.remove(min(a))
+a.remove(max(a))
+c = sum(a)
+d = [b, c]
+print(max(d)-min(d))'''
+
+'''import random as r
+
+a, b = map(int, input().split())
+#if a%2==1:
+#	a+=1
+	
+print(r.randrange(a+1, b+1, 2))'''
+
+'''import random as r
+
+a, b = map(int, input().split())
+if a%2==1:
+	a+=1
+	
+print(r.randrange(a, b+1, 2))'''
+
+'''T = int(input())
+print(T)
+
+for i in range(T):
+    a , b = map(int, input().split())
+    print(a+b)
+    i += 1'''
+
+
+'''h, b, c, s = map(int, input().split())
+s = h*b*c*s/8/1024/1024
+
+print(f"{s:.1f} MB")'''
+
+'''my = list(map(int, input().split()))
+std = list(map(int, input().split()))
+
+if my[1]<std[1] or (my[1] == std[1] and my[2] <= std[2]):
+    a1 = std[0] - my[0]
+else:
+    a1 = std[0] - my[0]-1
+
+a2 = std[0] - my[0] +1
+a3 = a2 - 1
+
+print(a1)
+print(a2)
+print(a3)'''
+
+'''n, m ,k = map(int, input().split())
+
+if k>=m:
+    mx = k
+else:
+    mx = m
+
+if n - m <= n-k:
+    mx += n - m
+else:
+    mx += m
+
+print(mx)'''
+
+'''a = int(input())
+b = int(input())
+print(a*2+b*2*3.141592)'''
+
+'''a, b = map(int, input().split())
+
+if b == 1 or b == 2:
+    print('NEWBIE!')
+elif b<=a:
+    print('OLDBIE!')
+else:
+    print('TLE!')'''
+
+'''t = int(input())
+n = list(map(int, input().split()))
+m = 0
+y = 0
+
+for i in n:
+    y+= (i//30+1)*10
+    m+= (i//60+1)*15
+
+if m==y:
+    print(f'Y M {y}')
+else:
+    if m< y:
+        print(f'M {m}')
+    else:
+        print(f'Y {y}')'''
+
+'''city = ["서울", "대전", "대구", "부산"]
+sale = [80, 60, 22, 50, 75]
+
+print("인덱스와 데이터의 조합")
+for i in enumerate(city) :
+    print(i)
+		
+print("두 리스트이 데이터 조합")
+for c, s in zip(city, sale) :
+	print(c, "도시 /", s, "매출")'''
+
+'''
+a = [1, 2, 3]
+d1, d2, d3 = a #리스트의 요소를 변수에 언팩 가능
+print(d1, d2, d3)
+
+print([i for i in range(60, 40, -1) if i%3==0])'''
+
+'''city = ["서울", "대전", "대구", "부산"]
+sale = [80, 60, 22, 50, 75]
+
+for i in zip(city, sale) :
+	print(list(i))
+#둘 중 더 짧은 요소를 가진 것만큼 돈다.
+
+print(zip(city, sale)[0])'''
+
+'''a, b = map(int, input().split())
+print(a*(b-1)+1)'''
+
+'''d = []
+
+for i in range(5):
+    d.append(sum(map(int, input().split())))
+
+print(d.index(max(d))+1, max(d))'''
+
+'''while True:
+    a = list(map(int, input().split()))
+    if a[0] == a[1] == a[2] == 0:
+        break
+    if a.pop(a.index(max(a)))**2 == max(a)**2+min(a)**2:
+        print('right')
+    else:
+        print('wrong')'''
+
+    
+'''n, m = map(int, input().split())
+d1 = []
+d2 = []
+
+for i in range(n):
+    d1.append(list(map(int, input().split())))
+for i in range(n):
+    d2.append(list(map(int, input().split())))
+
+for i in range(n):
+    for j in range(m):
+        print(d1[i][j]+d2[i][j], end=" ")
+    print()'''
+
+'''n = int(input())
+a, b, c = map(int, input().split())
+total = 0
+if a<=n:
+    total+=a
+else:
+    total+=n
+if b<=n:
+    total+=b
+else:
+    total+=n
+if c<=n:
+    total+=c
+else:
+    total+=n
+print(total)'''
+
+'''n = int(input())
+f=1
+for i in range(1,n+1):
+    f *= i
+print(f//604800)'''
+
+'''n = int(input())
+sl = []
+for i in range(n):
+    sl.append(input())
+for i in sl:
+    if 'S' in i:
+        print(i)'''
+
+''''s,d,i,l,n = map(int,input().split())
+if n*4-s-d-i-l>=0:
+    print(n*4-s-d-i-l)
+else:
+    print(0)'''
