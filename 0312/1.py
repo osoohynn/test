@@ -3495,10 +3495,10 @@ for i in okList[:-1]:
     print(f"{i}, ", end="")
 print(f'{okList[-1]}>')'''
 
-import sys
-input = lambda: sys.stdin.readline().rstrip()
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
 
-n, k = map(int, input().split())
+'''n, k = map(int, input().split())
 okList = []
 noOk = list(range(1,n+1))
 idx = 0
@@ -3511,4 +3511,350 @@ while noOk:
 print('<', end="")
 for i in okList[:-1]:
     print(f"{i}, ", end="")
-print(f'{okList[-1]}>')
+print(f'{okList[-1]}>')'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+t = int(input())
+d1 = list(range(1,t+1))
+d2 = []
+n = list(map(int, input().split()))
+for i in range(t):
+    if n[i] == 0:
+        d2.append(d1[i])
+    else:
+        d2.insert(-n[i], d1[i])
+print(*d2)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''import math
+for i in range(int(input())):
+    a, b = map(int, input().split())
+    print(math.lcm(a, b), math.gcd(a, b))'''
+
+'''a, b = input().split()
+a = a.replace('6', '5')
+b = b.replace('6', '5')
+mn = int(a)+int(b)
+a = a.replace('5', '6')
+b = b.replace('5', '6')
+print(mn, int(a)+int(b))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    n = input()
+    n2 = n[::-1]
+    if str(int(n)+int(n2)) == str(int(n)+int(n2))[::-1]:
+        print("YES")
+    else:
+        print("NO")'''
+
+'''T = int(input())
+for i in range(T):
+    a, b = input().split()
+    a = int(a)
+    b = int(b[-1])
+    if a % 10 == 0:
+        print(10)
+    else:
+        print(str(a**b)[-1])'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+while True:
+    t = int(input())
+    if t == 0:
+        break
+    d = []
+    d2 = []
+    for i in range(t):
+        s = input()
+        s2 = s.lower()
+        d.append(s)
+        d2.append(s2)
+    print(d[d2.index(min(d2))])'''
+
+'''for i in range(int(input())):
+    print(sorted(list(map(int, input().split())))[-3])'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''n = int(input())
+a, b = 0, 1
+
+for i in range(n):
+  a, b = b, a + b
+print(a)'''
+
+'''a, b = input().split()
+
+u = 0
+for i in a:
+    if i in b:
+        u = b.index(i)
+        u2 = a.index(i)
+        break
+# print(u)
+
+for i in range(len(b)):
+    for j in range(len(a)):
+        if i == u:
+            print(a[j],end="")
+        elif j == u2:
+            print(b[i], end="")
+        else:
+            print('.', end="")
+    print()'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+t = int(input())
+for i in range(t):
+    n = set(input())
+    print(len(n))'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+i = 0
+oneList = list(map(int,input().split()))
+twoList = [1,2,3,4,5]
+while True:
+    if oneList[i+1] < oneList[i]:
+        oneList[i+1], oneList[i] = oneList[i], oneList[i+1]
+        print(*oneList)
+    if oneList == twoList:
+        break
+    if i<3:
+        i+=1
+    else:
+        i=0'''
+    # print(i)
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+i = 1
+while True:
+    l, p, v = map(int, input().split())
+    if l == p == v == 0:
+        break
+    cnt = 0
+    cnt += v//p*l
+    if v%p >= l:
+        cnt += l
+    else:
+        cnt += v%p
+    print(f"Case {i}: {cnt}")
+    i += 1'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''a, b, c = map(int, input().split())
+cnt = (a+b)//c
+total = cnt
+while True:
+    if cnt>=c:
+        cnt = cnt//c
+        total += cnt
+        print(cnt, total)
+    else:
+        break
+print(total)'''
+
+'''n = 1000 - int(input())
+a = n//500
+b = n%500//100
+c = n%100//50
+d = n%50//10
+e = n%10//5
+f = n%5
+print(a+b+c+d+e+f)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+for i in range(5):
+    s = list(input())
+    d.append(s)
+# print(d)
+for i in range(15):
+    for j in range(len(d)):
+        if len(d[j])<(i+1):
+            continue
+        print(d[j][i], end="")'''
+
+'''d = [0]*10
+num = list(map(int, input()))
+for i in num:
+    if d[i] == True:
+        continue
+    else:
+        d[i] = num.count(i)
+a = d.pop(6)
+b = d.pop(8)
+d.append(int((a+b)/2+(a+b)%2))
+print(max(d))
+'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''t = int(input())
+d = list(input())'''
+'''for i in range(t-1):
+    s = input()
+    for i in range(len(s)):
+        if d[i] != s[i]:
+            d[i] = '?'
+        else:
+            continue
+for i in d:
+    print(i,end="")'''
+# 홀수 = 상근, 짝수 = 창영 
+'''n = int(input())
+if n%2==0:
+    print("CY")
+else:
+    print("SK")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = set()
+t = int(input())
+for i in range(t):
+    a, b = input().split()
+    if b == 'enter':
+        d.add(a)
+    elif b == 'leave':
+        if a in d:
+            d.remove(a)
+        else:
+            continue
+
+for i in sorted(list(d), reverse=True):
+    print(i)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n, m = map(int, input().split())
+d = []
+for i in range(n):
+    d.append(list(map(int, input().split())))
+# print(d)
+k = int(input())
+for r in range(k):
+    i, j, x, y = map(int, input().split())
+    cnt = 0
+    for p in range(i-1,x):
+        cnt += sum(d[p][j-1:y])
+    print(cnt)'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+ref = ['b', 'd', 'p', 'q', 'i', 'o', 'v', 'w', 'x']
+while True:
+    s = input()
+    s1 = list(s)
+    s2 = list(s)
+    if s == '#':
+        break
+    result = ""
+    for i in range(len(s2)):
+        if s2[i] not in ref:
+            result = "INVALID"
+        if s2[i] == 'b':
+            s2[i] = 'd'
+        elif s2[i] == 'd':
+            s2[i] = 'b'
+        elif s2[i] == 'p':
+            s2[i] = 'q'
+        elif s2[i] == 'q':
+            s2[i] = 'p'
+    # print(s2)
+    # print(s1)
+    # print(s2)
+    if result == "INVALID":
+        print(result)
+    else:
+        for i in s2[::-1]:
+            print(i, end="")
+        print()'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''year = []
+name = {}
+for i in range(3):
+    a,b,c = input().split()
+    year.append(int(b)%100)
+    name[int(a)]=c
+name1 = sorted(name, reverse=True)
+year.sort()
+for i in year:
+    print(i,end="")
+print()
+for i in name1:
+    print(name[i][0], end="")'''
+
+'''s = input()
+if 'A' in s:
+    s = s.replace('B', 'A')
+    s = s.replace('C', 'A')
+    s = s.replace('D', 'A')
+    s = s.replace('F', 'A')
+elif 'B' in s:
+    s = s.replace('C', 'B')
+    s = s.replace('D', 'B')
+    s = s.replace('F', 'B')
+elif 'C' in s:
+    s = s.replace('D', 'C')
+    s = s.replace('F', 'C')
+else:
+    s = 'A'*len(s)
+
+print(s)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''s = input()
+if s == s[::-1]:
+    print("true")
+else:
+    print("false")'''
+
+'''t = int(input())
+d = []
+for i in range(t):
+    d.append(list(map(int, input().split())))
+r = [0]*(d[-1][0])
+d.sort(key=lambda x:-x[2])
+# print(r)
+cnt = 0
+for i in d[:5]:
+    if cnt == 3:
+        break
+    if r[i[0]-1]<2:
+        print(i[0],i[1])
+        r[i[0]-1] += 1
+        cnt += 1
+    else:
+        continue'''
+
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+n = int(input())
+s = input()
+for i in range(0,len(s),n):
+    print(s[i],end="")
