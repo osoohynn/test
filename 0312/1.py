@@ -3852,9 +3852,26 @@ for i in d[:5]:
     else:
         continue'''
 
-import sys
-input = lambda: sys.stdin.readline().rstrip()
-n = int(input())
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''n = int(input())
 s = input()
 for i in range(0,len(s),n):
-    print(s[i],end="")
+    print(s[i],end="")'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''word_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+t= int(input())
+
+for j in range(t):
+    a, b = map(int, input().split())
+    s = input()
+    for i in s:
+        n = word_list.index(i)
+        print(word_list[(n*a+b)%26], end="")
+    print()'''
+
+import sys
+input = lambda: sys.stdin.readline().rstrip()
