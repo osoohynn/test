@@ -13,7 +13,7 @@ class Pan:
         return D
 
 # 방정식 계산이 방정식과, 함수, 부등식에 모두 사용됨.
-class Ban: 
+class Bang: 
     def __init__(self, a, b, c) :
         self.a = a
         self.b = b
@@ -28,15 +28,17 @@ class Ban:
 
 
 # 자식 클래스들
-class Bang_hae:
+class Bang_hae(Bang):
     pass
 
+# 요기.
 class Bang_pan(Pan):
     pass
 
-class Ham_hae(Ban):
+class Ham_hae(Bang):
     pass
 
+#여기
 class Ham_pan(Pan):
     pass
 
@@ -46,11 +48,12 @@ class Ham_gragh:
 class Ham_minmax:
     pass
 
-class Bu_hae(Ban):
+class Bu_hae(Bang):
     pass
 
 class Bu_ver:
     pass
 
-test = Ban(1,3,2)
-print(test.fun_1())
+# test = Ban(1,3,2)
+# print(test.fun_1())
+# dkkkk
