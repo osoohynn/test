@@ -3873,5 +3873,46 @@ for j in range(t):
         print(word_list[(n*a+b)%26], end="")
     print()'''
 
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''a = int(input())
+b = int(input())
+for i in range(a):
+    print("*"*b)'''
+'''n, m = map(int, input().split())
+cnt = 0
+for i in range(n):
+    s = input()
+    if s.count("O") > s.count("X"):
+        cnt += 1
+print(cnt)'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''cnt = 0
+while True:
+    try:
+        a = input()
+        cnt +=1
+    except EOFError:
+        break
+print(cnt)'''
+
+'''t = int(input())
+for i in range(t):
+    s = input()
+    if s[0:10] == 'Simon says':
+        print(s[10:])'''
+
 import sys
 input = lambda: sys.stdin.readline().rstrip()
+
+t = int(input())
+for j in range(t):
+    n, k = map(int, input().split())
+    n_list = list(map(int, input().split()))
+    cnt = 0
+    for i in n_list:
+        cnt += i//k
+    print(cnt)
+
