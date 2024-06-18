@@ -25,13 +25,12 @@ class Bang:
         return (small, big)
 
 
-
-
 # 자식 클래스들
 class Bang_hae(Bang):
     pass
 
 
+# 옮김.
 class Bang_pan(Pan):
     def __init__(self, a, b, c):
         super().__init__(a, b, c)
@@ -50,9 +49,15 @@ class Ham_gragh:
 class Ham_minmax:
     pass
 
+# 옮김
 class Bu_hae(Bang):
-    pass
+    def __init__(self):
+        a = int(input("a: "))
+        b = int(input("b: "))
+        c = int(input("c: "))
+        super().__init__(a, b, c)
 
+# 수직선
 class Bu_ver:
     pass
 
