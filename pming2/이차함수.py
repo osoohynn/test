@@ -1,3 +1,5 @@
+
+
 import panbyulsic
 
 a = int(input())

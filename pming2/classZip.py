@@ -8,7 +8,7 @@ class Pan:
         self.c = c
 
     D = 0
-    def fun_D_Pan(self, D):
+    def d_Pan(self):
         D=((self.b**2-(4*self.a*self.c)))
         return D
 
@@ -33,14 +33,17 @@ class Bang_hae(Bang):
 
 # 요기.
 class Bang_pan(Pan):
-    pass
+    def __init__(self, a, b, c):
+        super().__init__(a, b, c)
+
 
 class Ham_hae(Bang):
     pass
 
 #여기
 class Ham_pan(Pan):
-    pass
+    def __init__(self, a, b, c):
+        super().__init__(a, b, c)
 
 class Ham_gragh:
     pass
@@ -57,3 +60,8 @@ class Bu_ver:
 # test = Ban(1,3,2)
 # print(test.fun_1())
 # dkkkk
+
+def again():
+    answer = input("다시 하시겠습니까?  y/n\n")
+    # print(answer)
+    return answer
