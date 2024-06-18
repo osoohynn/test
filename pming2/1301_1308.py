@@ -4,10 +4,13 @@
 import bangjungsick as ba
 import hamsu as ha
 
+# 클래스 모아놓은 사용자 모듈
 import classZip as cz
 
 import time as t
 from art import text2art,tprint
+
+# 실행하면 기록 지워주는 모듈
 import os
 os.system('clear')
 
@@ -18,10 +21,12 @@ print(text2art("             dream",font="tarty1"))
 print()
 print(text2art("* * * * *", font="slant"))
 print(" "*30, "계산드림  made by 권수현, 서현동")
+# 여기까지
 
+
+# 잠깐 딜레이
 t.sleep(1.2)
 
-print("""""")
 
 def manual():
     # manual함수를 호출하면 매뉴얼을 보여준다.
