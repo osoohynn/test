@@ -11,6 +11,7 @@ from art import text2art,tprint
 import os
 os.system('clear')
 
+# 계산드림 로고
 print(text2art("* * * * *", font="slant"))
 print(text2art("          gyesan",font="tarty1"))
 print(text2art("             dream",font="tarty1"))
@@ -23,6 +24,8 @@ t.sleep(1.2)
 print("""""")
 
 def manual():
+    # manual함수를 호출하면 매뉴얼을 보여준다.
+    # 사용자에게 편의를 제공하기 위해 전체 매뉴얼을 보여주는 것.
     print("""
 * * * * * * * * * 매뉴얼입니다* * * * * * * *
 ?                                           ?
@@ -59,6 +62,7 @@ def manual():
 
     print("-------------------------------\n")
 
+    # 1, 2, 3 중에 원하는 것을 선택하고 그 값을 int로 변환하여
     firstChoice = int(input("""
 이차방정식 메뉴를 이용하고 싶으시면 1,
 
@@ -69,27 +73,56 @@ def manual():
 종료하고 싶으시면 4 를 입력해주세요
         
 """))
+    # 리턴한다.
     return firstChoice
 
 def main_reque():
     firstChoice = manual()
+    # manual 함수를 호출해서 첫번 째 선택한 값을 firstChoice에 담는다.
+    # 만약 firstChoice가 int가 아닌 다른 자료형이 입력되면 빠져나갈 예외처리 구현 필요함.
 
+        # 1: 이차방정식 선택
     if firstChoice == 1:
+        
+        # 방정식 중에서 어떤 메뉴를 선택할 것인지 묻는 함수를 호출한다.
         ba.bangjungsick_reque()
-        answer = cz.again()
-        if answer == 'y':
-            main_reque()
-    elif firstChoice == 2:
-        ha.hamsu_reque()
-        answer = cz.again()
-        if answer == 'y':
-            main_reque()
-    elif firstChoice == 3:
-        pass
-    elif firstChoice == 4:
-        print("감사합니다.")
-    else:
-        print("올바른 숫자를 입력해주세요")
-        print(firstChoice)
 
+        # 재사용 여부를 묻는 함수를 호출한다.
+        # 만약 y라면 main_reque를 호출하여 다시 시작한다.
+        answer = cz.again()
+        if answer == 'y':
+            main_reque()
+
+        # 2: 이차함수 선택
+    elif firstChoice == 2:
+
+        # 함수 중에서 어떤 메뉴를 선택할 것인지 묻는 함수를 호출한다.
+        ha.hamsu_reque()
+
+        # 재사용 여부를 묻는 함수를 호출한다.
+        # 만약 y라면 main_reque를 호출하여 다시 시작한다.
+        answer = cz.again()
+        if answer == 'y':
+            main_reque()
+
+        # 3: 이차부등식 선택
+    elif firstChoice == 3:
+        pass # 구현 중
+
+        # 4: 종료 선택
+    elif firstChoice == 4:
+        print("감사합니다. 시스템을 종료하겠습니다.")
+
+        # 만약 1~4가 아닌 다른 숫자라면
+    else:
+        print("\n------------------------")
+        print(f"{firstChoice}는 올바른 입력이 아닙니다.\n")
+        print("올바른 숫자를 입력해주세요.")
+        t.sleep(1)
+
+        # 다시 입력할 기회를 준다.
+        main_reque()
+
+
+#처음 실행하면 1회 호출.
 main_reque()

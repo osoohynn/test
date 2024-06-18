@@ -31,7 +31,7 @@ class Bang:
 class Bang_hae(Bang):
     pass
 
-# 요기.
+
 class Bang_pan(Pan):
     def __init__(self, a, b, c):
         super().__init__(a, b, c)
@@ -40,7 +40,6 @@ class Bang_pan(Pan):
 class Ham_hae(Bang):
     pass
 
-#여기
 class Ham_pan(Pan):
     def __init__(self, a, b, c):
         super().__init__(a, b, c)
@@ -57,11 +56,7 @@ class Bu_hae(Bang):
 class Bu_ver:
     pass
 
-# test = Ban(1,3,2)
-# print(test.fun_1())
-# dkkkk
 
 def again():
     answer = input("다시 하시겠습니까?  y/n\n")
-    # print(answer)
     return answer
