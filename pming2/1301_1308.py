@@ -1,8 +1,9 @@
 # cd Desktop/python/pming2
 # python3 13011308.py
 
-import bangjungsick as ba
-import hamsu as ha
+import moduleZip.bangjungsick as ba
+import moduleZip.hamsu as ha
+import moduleZip.budngsick as bu
 
 # 클래스 모아놓은 사용자 모듈
 import classZip as cz
@@ -18,7 +19,6 @@ os.system('clear')
 print(text2art("* * * * *", font="slant"))
 print(text2art("          gyesan",font="tarty1"))
 print(text2art("             dream",font="tarty1"))
-print()
 print(text2art("* * * * *", font="slant"))
 print(" "*30, "계산드림  made by 권수현, 서현동")
 # 여기까지
@@ -50,7 +50,7 @@ def manual():
 ?                                           ?
 ?           3. 그래프 보기                  ?
 ?                                           ?
-?           4. 최댓닶, 최솟값 구하기        ?
+?           4. 최댓값, 최솟값 구하기        ?
 ?                                           ?
 ?                                           ?
 ?       III 이차부등식                      ?
@@ -97,6 +97,10 @@ def main_reque():
         answer = cz.again()
         if answer == 'y':
             main_reque()
+        elif answer == 'n':
+            print("감사합니다. 시스템을 종료합니다.")
+        else:
+            print("예상치 못한 입력으로 시스템을 종료합니다.")
 
         # 2: 이차함수 선택
     elif firstChoice == 2:
@@ -109,14 +113,30 @@ def main_reque():
         answer = cz.again()
         if answer == 'y':
             main_reque()
+        elif answer == 'n':
+            print("감사합니다. 시스템을 종료합니다.")
+        else:
+            print("예상치 못한 입력으로 시스템을 종료합니다.")
 
         # 3: 이차부등식 선택
     elif firstChoice == 3:
-        pass # 구현 중
+
+        # 부등식 중에서 어떤 메뉴를 선택할 것인지 묻는 함수를 호출한다.
+        bu.budbgsick_reque()
+
+        # 재사용 여부를 묻는 함수를 호출한다.
+        # 만약 y라면 main_reque를 호출하여 다시 시작한다.
+        answer = cz.again()
+        if answer == 'y':
+            main_reque()
+        elif answer == 'n':
+            print("\n감사합니다. 시스템을 종료합니다.")
+        else:
+            print("예상치 못한 입력으로 시스템을 종료합니다.")
 
         # 4: 종료 선택
     elif firstChoice == 4:
-        print("감사합니다. 시스템을 종료하겠습니다.")
+        print("감사합니다. 시스템을 종료합니다.")
 
         # 만약 1~4가 아닌 다른 숫자라면
     else:
@@ -127,7 +147,6 @@ def main_reque():
 
         # 다시 입력할 기회를 준다.
         main_reque()
-
 
 #처음 실행하면 1회 호출.
 main_reque()
