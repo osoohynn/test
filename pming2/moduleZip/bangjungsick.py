@@ -37,11 +37,16 @@ def bangjungsick_reque():
 
 """))
     if answer==1:
+        cz.des()
         try1 = Bang_hae()
         answer = cz.puli()
         if answer == 'y':
-            cz.answer_print()      # 괄호 안의 숫자가 -면 +로 바뀌게 수정.
-            print(f"\n인수분해 결과 : (x-{-(try1.fun_1()[0])})(x-{-(try1.fun_1()[1])})")
+            if try1.fun_1()[0]>0:
+                t1 = -(try1.fun_1()[0])
+            if try1.fun_1()[1]>0:
+                t2 = -(try1.fun_1()[1])            
+            cz.answer_print()
+            print(f"\n인수분해 결과 : (x-{-(t1)})(x-{-(t2)})")
             print(f"\nx = {try1.fun_1()[0]} or x = {try1.fun_1()[1]}\n")
             cz.answer_print()
         elif answer == 'n':
@@ -51,6 +56,7 @@ def bangjungsick_reque():
         else:
             print("예상치 못한 입력으로 시스템을 종료합니다.")
     elif answer == 2:
+        cz.des()
         try1 = Bang_pan()
         answer = cz.puli()
         if answer == 'y':

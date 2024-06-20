@@ -24,16 +24,18 @@ class Bang:
         if D<0:
             D=D*-1
             s1=math.sqrt(D)
-            small = ((-self.b)/(2*self.a)+(s1*-1)/2*self.a)
-            big =  ((-self.b)/(2*self.a)-(s1*-1)/2*self.a)
+            small = (((-self.b)+(s1*(-1)))/2*self.a)
+            big =  (((-self.b)-(s1*(-1)))/2*self.a)
         else:
-            small = ((-self.b)//(2*self.a)+(math.sqrt(D))//2*self.a)
-            big =  ((-self.b)//(2*self.a)-(math.sqrt(D))//2*self.a)
-        return small,big
+            small = (((-self.b)+(math.sqrt(D)))/2*self.a)
+            big =  (((-self.b)-(math.sqrt(D)))/2*self.a)
 
-    #     small = ((-self.b+math.sqrt(self.b**2-4*self.a*self.c))/2*self.a)
-    #     big =  ((-self.b-(math.sqrt(self.b**2-4*self.a*self.c)))/2*self.a)
-    #     return (small, big)
+        # print(small, big)
+        return (small,big)
+
+        # big = ((-self.b+math.sqrt(self.b**2-4*self.a*self.c))/2*self.a)
+        # small =  ((-self.b-(math.sqrt(self.b**2-4*self.a*self.c)))/2*self.a)
+        # return (small, big)
 
 
 # 자식 클래스들
@@ -70,7 +72,33 @@ class Ham_pan(Pan):
 #     pass
 
 class Ham_minmax:
-    pass
+    def find_maximum(self):
+        D = Pan.d_Pan(self)
+        a=float(input("a: "))
+        b=float(input("b: "))
+        c=float(input("c: "))
+        g_max= -b / (2 * a)  # 공식을 이용해 구함: x = -b / (2*a)
+        g_min = a * g_max**2 + b * g_max + c  # 정점에서의 최댓값을 계산함: y = ax^2 + bx + c
+        if D>0:
+            return g_min
+        
+        elif D<0:
+            return g_max
+
+        else:
+            print("다시 입력하여 주세요")
+
+        # if D>0:
+        #     print(D)
+        #     print("최솟값")
+        #     return g_min
+        # elif D<0:
+        #     print(D)
+        #     print("최댓값")
+        #     return g_max
+
+        # else:
+        #     print("다시 입력하여 주세요")
 
 # 옮김
 class Bu_hae(Bang):
@@ -95,3 +123,9 @@ def puli():
 
 def answer_print():
     print("-"*40)
+
+def des():
+    print("\n'ax² + bx + c = 0' 의 형태입니다. \n a, b, c를 차례대로 입력해주세요. \n")
+
+def des_bu():
+    print("\n'ax² + bx + c (입력받은 부등호 기호) 0' 의 형태입니다. \n a, b, c를 차례대로 입력해주세요. \n")

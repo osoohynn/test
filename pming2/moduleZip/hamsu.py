@@ -10,8 +10,21 @@ class Ham_pan(cz.Pan):
         c = int(input("c: "))
         super().__init__(a, b, c)
 
-class Ham_hae(cz.Bang):
-    pass
+class Ham_hae(cz.Pan):
+    def __init__(self):
+        a = int(input("a: "))
+        b = int(input("b: "))
+        c = int(input("c: "))
+        super().__init__(a, b, c)
+
+    def hae(self):
+        D = cz.Pan.d_Pan(self)
+        if D>0:
+            print("서로 다른 두 점에서 만난다.")
+        elif D==0:
+            print("한 점에서 만난다. (접한다.)")
+        else:
+            print("만나지 않는다.")
 
 def graph():
     def find_maximum_of_quadratic(a, b, c):
@@ -53,8 +66,13 @@ def hamsu_reque():
 
 """))
     if answer == 1:
-        pass
+        cz.des()
+        try1 = Ham_hae()
+        cz.answer_print()
+        try1.hae()
+        cz.answer_print()
     elif answer == 2:
+        cz.des()
         try1 = Ham_pan()
         answer = cz.puli()
         if answer == 'y':
@@ -70,8 +88,10 @@ def hamsu_reque():
         else:
             print("예상치 못한 입력으로 시스템을 종료합니다.")
     elif answer == 3:
+        cz.des()
         graph()
     elif answer == 4:
+        cz.des()
         pass
     else:
         print("숫자 제대로")
