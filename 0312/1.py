@@ -3904,10 +3904,10 @@ for i in range(t):
     if s[0:10] == 'Simon says':
         print(s[10:])'''
 
-import sys
-input = lambda: sys.stdin.readline().rstrip()
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
 
-t = int(input())
+'''t = int(input())
 for j in range(t):
     n, k = map(int, input().split())
     n_list = list(map(int, input().split()))
@@ -3916,3 +3916,2640 @@ for j in range(t):
         cnt += i//k
     print(cnt)
 
+'''
+
+'''k = int(input())
+a, b, c, d = map(int, input().split())
+
+if a*k + b == c*k + d:
+    print("YES",(a*k + b))
+else:
+    print("NO")'''
+
+
+'''d = [64]
+x = int(input())
+while sum(d) > x:
+    mn = d.pop(d.index(min(d)))
+    d.extend([mn//2, mn//2])
+    if sum(d)-(min(d)) >=x:
+        d.pop(d.index(min(d)))
+
+print(len(d))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    a, b = map(int, input().split())
+    if a % 10 == 0:
+        print(10)
+    else:
+        b = (b % 4) + 4
+        print((a ** b) % 10)'''
+
+'''for i in range(int(input())):
+    p = input()
+    c1 = sorted(list(input()))
+    c2 = sorted(list(input()))
+    if c1 == c2:
+        print("NOT CHEATER")
+    else:
+        print("CHEATER")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''S = input()
+t = input()
+
+stack = []
+ex_len = len(t)
+
+for i in range(len(S)):
+    stack.append(S[i])
+    if ''.join(stack[-ex_len:]) == t:
+        for _ in range(ex_len):
+            stack.pop()
+
+# 결과 출력
+print(''.join(stack))'''
+
+'''t = int(input())
+tl = sorted(list(map(int, input().split())))
+print(sum([sum(tl[:i+1]) for i in range(t)]))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d2 = []
+n, k = map(int, input().split())
+d1 = list(range(1, n+1))
+i = 0
+while 1:
+    if sum(d1) == 0:
+        break
+    i += k-1
+    while i >= len(d1):
+        i -= len(d1)
+    d2.append(d1.pop(i))
+
+print("<",end="")
+for i in d2[:-1]:
+    print(i, end=", ")
+print(f"{d2[-1]}>")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''t = int(input())
+for i in range(t):
+    a = sorted(list(map(int, input().split())))
+    if a[2]**2 == a[0]**2 + a[1]**2:
+        print(f"Scenario #{i+1}:")
+        print('yes\n')
+    else:
+        print(f"Scenario #{i+1}:")
+        print("no\n")'''
+
+'''h1, m1, s1 = map(int, input().split(':'))
+h2, m2, s2 = map(int, input().split(':'))
+t = h2*3600+m2*60+s2 - (h1*3600+m1*60+s1)
+if t < 0:
+    t += 60*60*24
+h = t//3600 
+m = (t%3600)//60 
+s = t%60
+print("%02d:%02d:%02d" % (h,m,s))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = {}
+t = int(input())
+for i in range(t):
+    w,W = input().split()
+    d[W] = w
+s = input()
+p = ""
+for i in s:
+    p += d[i]
+y,u = map(int, input().split())
+print(p[y-1:u])'''
+
+'''d = []
+t = int(input())
+for i in range(t):
+    a, b = map(int, input().split())
+    if a <= b:
+        d.append(b)
+
+if len(d) > 0:
+    print(min(d))
+else:
+    print(-1)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''def num(n, s):
+    if s == 1:
+        return int(str(n)[s-1])
+    return int(str(n)[s-1]) + num(n, s-1)
+
+n = int(input())
+s = len((str(n)))
+print(num(n,s))'''
+
+'''def fibo(n):
+    if n == 1 or n == 2:
+        return 1
+    return fibo(n-1) + fibo(n-2)
+
+n = int(input())
+print(fibo(n))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+for i in range(5):
+    a = int(input())
+    if a in d:
+        d.remove(a)
+    else:
+        d.append(a)
+
+print(d[0])'''
+
+# a,b = map(int, input().split())
+# for i in range(b):
+#     d = []
+#     for i in range(1,a+1):
+#         if a%i==0:
+#             d.append(i)
+    # for j in range(2,a//2):
+    #     if a%j==0:
+    #         q=j; p=a//j
+    # a = int(str(q)+str(p))
+# print(a)
+
+# a = input()
+# d = [int(i) for i in a]
+# while 1:
+#     t = 1
+#     if len(d)==1:
+#         break
+#     d = [int(i) for i in d]
+#     for i in d:
+#         t*= i
+#     d = str(t)
+# print(d)
+
+'''a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+t1 = min([a,b,c])
+t2 = min([d,e])
+print(t1+t2-50)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''
+d1 = []
+d2 = []
+
+for i in range(9):
+    p = list(map(int, input().split()))
+    q = max(p)
+    d1.append(p)
+    d2.append(q)
+print(max(d2))
+print(d2.index(max(d2))+1, d1[d2.index(max(d2))].index(max(d2))+1)'''
+
+
+'''d = [[0 for x in range(100)] for y in range(100)]
+t = int(input())
+for i in range(t):
+    a, b = map(int, input().split())
+    for j in range(100):
+        if j==(90-b):
+            for k in range(10):
+                for l in range(10):
+                    d[90-b+k][a+l] = 1
+total = 0
+for i in d:
+    total += i.count(1)
+print(total)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''word_list = {'A':'a', 'K':'k', 'M':'m', 'O':'o','T':'t', 'B':'v', 'E':'ye', 'H':'n', 'P':'r', 'C':'s', 'Y':'u', 'X':'h'}
+s1 = input()
+s2 = ""
+for i in s1:
+    s2 += word_list[i]
+print(s2)'''
+
+'''s = input()
+n = int(input())
+cnt = 0
+total = 0
+for i in range(n):
+    s2 = input()
+    p = []
+    for j in range(len(s2)):
+        cnt = 0
+        if s2[j]==s[0] and not(bool(p)):
+            for k in range(len(s)):
+                if s[k] == s2[(k+j)%(len(s2))]:
+                    cnt +=1
+                    # print(s[k], s2[j], cnt)
+            if cnt == len(s):
+                total+=1
+                p = [1]
+print(total)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''G = sum(map(int, input().split()))
+E = sum(map(int, input().split()))
+
+if G>E:
+    print("Gunnar")
+elif E>G:
+    print("Emma")
+else:
+    print("Tie")'''
+
+'''pri = int(input())
+
+get1 = pri*0.78
+get2 = pri - pri*0.2*0.22
+print(int(get1), int(get2))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+while 1:
+    s = input()
+    if s == '-1':
+        break
+    s = s.split()
+    d.append(s)
+
+pa = 0
+rList = []
+for i in d:
+    if i[2] == 'right':
+        if i[2] not in rList:
+            rList.append(i)
+            pa += int(i[0])
+
+wcnt = 0
+for i in rList:
+    for j in d:
+        if j[1] == i[1]:
+            # pa += int(j[0])
+            if j[2] == 'wrong':
+                wcnt += 1
+
+# print(rList)
+print(len(rList),pa+wcnt*20)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+f = int(input())
+
+d = []
+i = 0
+while 1:
+    a = str(n-(n%f)-f*i)
+    if len(a)<3:
+        a = '00000'+a
+    # print(a)
+    if a[-3] != str(n)[-3]:
+        break
+    d.append(a[-2:])
+    i += 1
+
+i = 0
+d1 = []
+while 1:
+    b = str(n + f - (n%f)+f*i) # 1000+3-1 = 1002
+    if len(b)<3:
+        b = '00000'+b
+    # print(b)
+    if b[-3] != str(n)[-3]:
+        break
+    d1.append(b[-2:])
+    i += 1
+
+d = [int(x) for x in d]
+d1 = [int(x) for x in d1]
+d2 = d+d1
+print(f"{min(d2):0>2}")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n, m = map(int, input().split())
+k = list(map(int, input().split()))
+t = set()
+for i in k:
+    a = i
+    while a<=n:
+        t.add(a)
+        a+=i
+    # print(t)
+print(sum(list(t)))'''
+
+'''n, m = map(int, input().split())
+
+if n <= 1023:
+    print('No thanks')
+else:
+    n -= 1023
+    nums = [1,2,4,8,16,32,64,128,256,512]
+    d = []
+    while m:
+        for i in nums[::-1]:
+            if m >= i:
+                d.append(i)
+                m -= i
+        print(d)
+    for i in d:
+        if n == i:
+            print('Thanks')
+            break
+        else:
+            print('Impossible')
+            break'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n, d = input().split()
+
+cnt = 0
+for i in range(1, int(n)+1):
+    cnt += str(i).count(d)
+
+print(cnt)'''
+
+'''for i in range(int(input())):
+    d = input().split()[::-1]
+    print(f"Case #{i+1}: ", end="")
+    for j in d:
+        print(j, end=" ")'''
+
+'''d = []
+for i in range(int(input())):
+    n = int(input())
+    d.append(n)
+d = d[::-1]
+
+total = 0
+m = d[0]
+for i in range(len(d)):
+    if d[i]>m:
+        total += 1
+        m = d[i]
+print(total+1)
+'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''t = int(input())
+d = [60*5, 60, 10]
+p = []
+for i in d:
+    if t>=i:
+        q = t//i
+        p.append(t//i)
+        t -= q*i
+    else:
+        p.append(0)
+if t%d[2]!=0:
+    print(-1)
+else:
+    print(*p)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''N = int(input())
+
+alist = list(map(int, input().split()))
+blist = list(map(int, input().split()))
+
+cnt = 0
+for i in range(N):
+    if alist[i] < blist[i]:
+        cnt += blist[i] - alist[i]
+print(cnt)'''
+
+'''n, m = map(int, input().split())
+total = 0
+d = []
+for i in range(m):
+    a, b = map(int, input().split())
+    d.append(a)
+d = sorted(d)
+for i in d[1:]:
+    if i < n:
+        total += n-i
+
+print(total)'''
+
+'''n = int(input())
+lis = list(map(int,input().split()))
+total = 0
+for i in lis:
+    cnt = 0
+    for j in range(2, i):
+        if i%j==0:
+            print(i, j, 0)
+            break
+        else:
+            cnt+=1
+    if cnt == i-2:
+        total += 1
+print(total)'''
+
+'''v = int(input())
+
+print('v'*v)'''
+
+'''s = 'WelcomeToSMUPC'
+n = int(input())
+print(s[n%14-1])'''
+
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''nl = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+d = []
+for i in range(int(input())):
+    s = input()+" "
+    d1 = ''
+    for j in range(len(s)):
+        if s[j] in nl:
+            d1 += s[j]
+        else:
+            if bool(d1) == True:
+                d.append(d1)
+            d1 = ''
+
+d = [int(x) for x in d]
+
+for i in sorted(d):
+    print(i)'''
+
+"""d = "`1234567890-=QWERTYUIOP[]\\ASDFGHJKL;\'ZXCVBNM,./"
+while True:
+    s = input()
+    if s == '':
+        break
+    p = ''
+    for i in s:
+        if i != " ":
+            r = d.index(i)-1
+            p += d[r]
+        else:
+            p+=' '
+    print(p)
+"""
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+for i in range(int(input())):
+    s = input()
+    if len(s)==3:
+        d.append(s)
+print(sorted(d)[0])'''
+'''d = []
+for i in range(7):
+    s = input().split()
+    s[1] = int(s[1])
+    d.append(s)
+
+d = sorted(d ,key=lambda x:x[1], reverse=True)
+print(d[0][0])'''
+
+'''n = int(input())+2
+
+for i in range(n):
+    if i == 0 or i == n-1:
+        print('@'*n)
+    else:
+        print('@'+' '*(n-2)+'@')'''
+
+# n = int(input())
+
+'''for i in range(n*5):
+    if i >= n*4 or i < n:
+        print('@'*n*5)
+    else:
+        print('@'*n)'''
+
+'''for i in range(n*5):
+    if i < n:
+        print('@'*n*3 + ' '*n + '@'*n)
+    elif n<=i<n*4:
+        print('@'*n + ' '*n + '@'*n+ ' '*n + '@'*n)
+    else:
+        print('@'*n + ' '*n + '@'*n*3)'''
+
+# n = int(input())
+
+'''for i in range(n*5):
+    if i < n or i >= n*4:
+        print('@'*n*5)
+    else:
+        print('@'*n+' '*((n*5)-(n*2))+'@'*n)'''
+
+'''for i in range(n*5):
+    if n*2<=i<n*3 or i>=n*4:
+        print('@'*n*5)
+    else:
+        print('@'*n + ' '*n*3 + '@'*n)'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+
+for i in range(n*5):
+    if n<= i < n*2 or n*3<= i < n*4:
+        print('@'*n*5)
+    else:
+        print('@'*n+' '*n*3+'@'*n)'''
+
+'''n = int(input())
+
+for i in range(n):
+    print(' '*(n-i-1)+'*', end="")
+    if i > 0:
+        print(' '*((1+i*2)-2)+'*')
+    else:
+        print()'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n, m = map(int, input().split())
+
+n1 = (n+3)//4-1
+# n2 = n%4 if n%4!=0 else n%4+4
+n2 = (n-1)%4
+m1 = (m+3)//4-1
+# m2 = m%4 if m%4!=0 else m%4+4
+m2 = (m-1)%4
+print(n1, m1, n2, m2)
+total = max(n1, m1) - min(n1, m1)
+total += max(n2, m2) - min(n2, m2)
+print(total)'''
+
+'''def pn(r, k):
+    for i in range(2, k):
+        if r % i == 0:
+            if i < k:
+                print("BAD", i)
+                return
+    print("GOOD")
+    return'''
+
+'''r, k = map(int, input().split())
+
+pn(r, k)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''t = int(input())
+n = list(map(int, input().split()))
+
+score = 0
+sl = [0]*t
+for i in range(t):
+	if n[i] == 1:
+		if sl[i-1] >= 1:
+			sl[i] = sl[i-1]+1
+			score += sl[i]
+		else:
+			score += 1
+			sl[i] = 1
+	else:
+		sl[i] = 0
+		
+print(score)'''
+
+'''t = int(input())
+for i in range(t):
+    q = input()
+    n = int(input())
+    sum = 0
+    for j in range(n):
+        a = int(input())
+        sum += a
+    if sum%n==0:
+        print("YES")
+    else:
+        print("NO")'''
+
+'''d = []
+for i in range(7):
+    n = int(input())
+    if n%2!=0:
+        d.append(n)
+if bool(d) == False:
+    print(-1)
+else:
+    print(sum(d))
+    print(min(d))'''
+
+'''import math
+
+n = int(input())
+print(f"{n**2*math.pi:.6f}")
+print(f"{n**2*2:.6f}")'''
+'''
+while 1:
+    a, b = input().split()
+    if a == b == '0':
+        break
+    cnt = 0
+    carry = 0
+    a = list(a)[::-1]; b = list(b)[::-1]
+    t = max(len(a), len(b))
+    for i in range(t):
+        if int(a[i]) + int(b[i]) + carry >= 10:
+            cnt+=1
+            carry = 1
+        else:
+            carry = 0
+    print(cnt)'''
+    
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    a = int(input())
+    for j in range(a):
+        for k in range(a):
+            if j == 0 or j == a-1 or k == 0 or k == a-1:
+                print('#', end="")
+            else:
+                print('J', end="")
+        print()
+    print()'''
+
+'''a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+
+if b%d==0:
+    q = b//d
+else:
+    q = b//d+1
+if b%d==0:
+    w = c//e
+else:
+    w = c//e+1
+
+print(a-max(q,w))'''
+
+'''a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = list(map(int, input().split()))
+
+for i in [a,b,c]:
+    firSec = i[0]*60*60+i[1]*60+i[2]
+    lasSec = i[3]*60*60+i[4]*60+i[5]
+    s = lasSec - firSec
+    s1 = s//3600; s2=(s-s1*3600)//60
+    s3 = (s-s1*3600-s2*60)
+    print(s1, s2, s3)'''
+
+'''a = list(map(int, input().split()))
+x, y, r = map(int, input().split())
+
+for i in a:
+    if i == x:
+        print(a.index(i)+1)
+        a.pop()
+if len(a) == 4:
+    print(0)'''
+
+'''a = []
+for i in range(8):
+    s = int(input())
+    a.append(s)
+
+b = sorted(a, reverse=True)
+print(sum(b[:5]))
+
+d = []
+for i in b[:5]:
+    d.append(a.index(i)+1)
+print(*sorted(d))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''a, b = map(int, input().split())
+
+if a == 1 :
+    a = 2
+
+for i in range(a, b+1):
+    cnt = 0
+    for j in range(2, int(i**0.5)+1):
+        if i%j == 0:
+            cnt = 1
+            break
+    if cnt==0:
+        print(i)
+'''
+
+'''a, b = map(int, input().split())
+
+s = a - (a*b/100)
+if s>=100:
+    print(0)
+else:
+    print(1)'''
+
+'''total = 0
+for i in range(int(input())):
+    s = input()
+    if int(s[2:])<=90:
+        total+=1
+print(total)'''
+'''d = {136:1000, 142:5000, 148:10000, 154:50000}
+
+total = 0
+for i in range(int(input())):
+    a, b = map(int, input().split())
+    total += d[a]
+print(total)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''a, b = map(int, input().split())
+c = min(a, b+1)
+d = c-1
+print(c+d)'''
+'''
+a,b=map(int, input().split())
+
+print(min(a, b*2)//2)'''
+
+'''d = [500, 0.1, 2000, 0.25]
+
+a = int(input())
+b = int(input())
+q = []
+if a > 20:
+    a = 20
+for i in range(a//5):
+    if i%2==0:
+        q.append(b-d[i])
+    else:
+        q.append(b-int(d[i]*b))
+
+if bool(q)==False:
+    print(b)
+elif b<b-min(q):
+    print(0)
+else:
+    print(min(q))'''
+# print(q)
+'''
+a = int(input())
+print(2**a)'''
+
+'''d = []
+for i in range(15):
+    s = input()
+    d.append(s)
+
+for i in d:
+    if 'w' in i:
+        print('chunbae')
+        break
+    elif 'b' in i:
+        print('nabi')
+        break
+    elif 'g' in i:
+        print('yeongcheol')
+        break'''
+
+'''t = int(input())
+n = int(input())
+f = list(map(int, input().split()))
+
+if t <= sum(f):
+    print("Padaeng_i Happy")
+else:
+    print("Padaeng_i Cry")'''
+'''
+for i in range(int(input())):
+    y = input()
+    n = int(y[-2:])
+    y = int(y)+1
+    if y%n==0:
+        print("Good")
+    else:
+        print("Bye")'''
+
+'''a = input()
+
+if a[0] == a[-1]=='"':
+    if len(a) < 3: 
+        print("CE")
+    else:
+        print(a[1:-1])
+else:
+    print("CE")'''
+
+'''s = input()
+l = input()
+a = input()
+print(l.count(a))'''
+
+'''d = []
+q = ['l', 'p', 'k']
+
+d.append(input())
+d.append(input())
+d.append(input())
+
+for i in d:
+    for j in q:
+        if i[0] == j:
+            q.remove(i[0])
+
+if bool(q) == False:
+    print("GLOBAL")
+else:
+    print("PONIX")'''
+
+'''a = int(input())
+
+for i in range(a):
+    if i == 0:
+        print(' '*(a-i-1)+'*')
+        continue
+    if i == a-1:
+        print('*'*(a*2-1))
+        continue
+    print(' '*(a-i-1)+'*'+' '*(1+(i-1)*2)+'*')'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+for i in range(1,n+1):
+    print(' '*(n-i)+'* '*i)'''
+
+
+'''n = int(input())
+for i in range(n):
+    m = int(input())
+    i = 0
+    for j in range(30):
+        if i == 1:
+            break
+        for k in range(30):
+            if 2**j+2**k == m:
+                print(j, k)
+                i = 1
+                break
+'''
+
+'''n, x = map(int, input().split())
+
+d = []
+for i in range(n):
+    s, t = map(int, input().split())
+    if s+t<=x:
+        d.append([s,t])
+
+d.sort(key=lambda x:(x[0], x[1]), reverse=True)
+if d:
+    print(d[0][0])
+else:
+    print(-1)'''
+
+'''t = input()
+s = input()
+print(s[-5:])'''
+'''
+d = []
+for i in range(int(input())):
+    d.append(int(input()))
+sum = 0
+a = int(input())
+for i in range(a):
+    y = int(input())
+    sum += d[y-1]
+print(sum)'''
+
+'''print(input().count("DKSH"))'''
+
+"""a, b = map(int, input().split())
+
+'''m = (b-a)/400
+print(1/(1+10**m))'''
+
+print(min(a,b)//2)"""
+'''
+a, b = map(int, input().split())
+c = list(map(int, input().split()))
+
+min = c[0]+c[1]
+for i in range(a-1):
+    if c[i]+c[i+1] <= min:
+        min = c[i]+c[i+1]
+
+print(min*b)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''a, b, c = map(int, input().split())
+print(max(b, a+c))'''
+
+
+'''while 1:
+    a = input()
+    if a == '0':
+        break
+    cnt = 0
+    for i in range(len(a)):
+        p = 1
+        for j in range(1,(len(a)-i+1)):
+            p *= j
+        cnt += int(a[i])*p
+    print(cnt)'''
+'''
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+d = {'BANANA':0, 'STRAWBERRY':0, 'PLUM':0, 'LIME':0}
+t = int(input())
+for i in range(t):
+    a, b = input().split()
+    d[a] += int(b)
+
+cnt = 0
+for i in d.items():
+    if i[1] == 5:
+        cnt = 1
+        print("YES")
+        break
+if cnt == 0:
+    print("NO")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+for i in range(int(input())):
+    s = input()
+    d.append(s)
+
+pw = ''
+for i in d:
+    for j in d:
+        if i[::-1] == j:
+            pw = i
+            break
+
+print(len(pw), pw[len(pw)//2])'''
+
+'''n, m = map(int, input().split())
+
+d = {}
+
+for i in range(n):
+    a, b, c = input().split(' ', maxsplit=2)
+    c = c[:5]
+    if c in d:
+        d[c] = '?'
+    else:
+        d[c] = b
+
+for i in range(m):
+    s = input()
+    if s in d:
+        print(d[s])
+    else:
+        print('!')'''
+
+'''d = []
+n = int(input())
+for i in range(n):
+    d.append(int(input()))
+
+d = d[::-1]
+# print(d.index(max(d)))
+# print(len(d)-1)
+
+cnt = 0
+while d.index(max(d)) != len(d)-1:
+    d[d.index(max(d))] -= 1
+    d[-1] += 1
+    cnt+=1
+print(cnt)'''
+
+'''n = int(input())
+d = []
+for i in range(1, n+1):
+    d.append(i)
+print(d)
+
+for i in range(len(d)-1):
+    print(d[0], end=" ")
+    # print(d)
+    d.pop(0)
+    d.append(d.pop(0))
+print(d[0])'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+s = input().split()
+d = {}
+for i in s:
+    d[i] = 0
+
+for i in range(n):
+    p = input().split()
+    for j in p:
+        if j in d:
+            d[j] += 1
+        else:
+            continue
+d = sorted(d.items(), key=lambda x:(x[0]))
+d = sorted(d, key=lambda x:(x[1]), reverse=True)
+for i in d:
+    print(i[0], i[1])'''
+
+'''n = int(input())
+lis = input().split()
+s = set()
+
+for i in lis:
+    if i[-6:]=='Cheese':
+        s.add(i)
+
+if len(list(s)) >= 4:
+    print("yummy")
+else:
+    print("sad")'''
+
+'''a, b = input().split()
+c, d = input().split()
+
+s = set([a, b, c, d])
+s = sorted(list(s))
+
+for i in s:
+    for j in s:
+        print(i, j)'''
+
+'''d = {}
+n, m, k = map(int, input().split())
+for i in range(n):
+    a, b = input().split()
+    d[a] = int(b)
+cnt = 0
+for i in range(k):
+    a = input()
+    cnt += d[a]
+    del d[a]
+d = sorted(d.items(), key=lambda x:x[1])
+mi = cnt; ma = cnt
+
+for i in range(m-k):
+    mi += d[i][1]
+    ma += d[-i-1][1]
+
+for i in d[:m-k]:
+    mi += i[1]
+for i in d[-(m-k):]:
+    ma += i[1]
+print(mi, ma)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+
+c = {}
+d = {}
+e = []
+f = {}
+for i in range(n):
+    a, b = input().split()
+    if b in d:
+        if b not in f:
+            f[b] = 2
+        else:
+            f[b] += 1
+    if b != '-':
+        c[a] = b
+        d[b] = a'''
+# print(d)
+# print(f)
+
+'''f = [k for k, v in f.items() if v == 2]
+
+for i in f:
+    g = [k for k,v in c.items() if v == i]
+    e.append(g)
+# print(e)
+print(len(e))
+if e:
+    for i in e:
+        print(i[0], i[1])'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''m, m = map(int, input().split())
+a = set(list(map(int, input().split())))
+b = set(list(map(int, input().split())))
+print(len(list(a-b))+len(list(b-a)))'''
+
+'''d = {}
+for i in range(int(input())):
+    a = input()
+    if a not in d:
+        d[a] = 1
+    else:
+        d[a] += 1
+d = sorted(d.items())
+d = sorted(d, key=lambda x:x[1], reverse=True)
+
+print(d[0][0])'''
+
+# w = set()
+# h = set()
+'''n, m = map(int, input().split())
+for i in range(n):
+    s = input()
+    w.add(s)
+for i in range(m):
+    s = input()
+    h.add(s)
+d = sorted(list(w&h))
+print(len(d))
+for i in d:
+    print(i)'''
+
+'''m, m = map(int, input().split())
+a = set(list(map(int, input().split())))
+b = set(list(map(int, input().split())))
+print(len(list(a-b)))
+if list(a-b):
+    print(*sorted(list(a-b)))
+'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''o = ['1', '2', '3', '4', '6', '7', '0', '9']
+for i in range(int(input())):
+    n = int(input())
+    d1 = list(map(int, input().split()))
+    n = int(input())
+    d2 = list(map(int, input().split()))
+    n = int(input())
+    d3 = list(map(int, input().split()))
+    t = set()
+    for l in d1:
+        for j in d2:
+            for k in d3:
+                p = l+j+k
+                p = str(p)
+                cnt = 0
+                for i in p:
+                    if i in o:
+                        break
+                    else:
+                        cnt += 1
+                if cnt==len(p):
+                    t.add(p)
+    print(len(list(t)))'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+a1, a2, a3 = map(int, input().split())
+c1, c2, c3 = map(int, input().split())
+
+b3 = c3 - a1
+b1 = c1 - a3
+b2 = c2//a2
+
+print(b1, b2, b3)'''
+'''
+n = int(input())
+while 1:
+    a = int(input())
+    if a == 0:
+        break
+    print(f"{a} is", end="")
+    print("", end="") if a%n==0 else print(" NOT", end="")
+    print(f" a multiple of {n}.")
+'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+
+d1 = 0
+d3 = 0
+for i in range(1, n+1):
+    d1 += i
+    d3 += i**3
+print(d1)
+print(d1**2)
+print(d3)'''
+
+'''d = ['Never gonna give you up', 
+'Never gonna let you down', 
+'Never gonna run around and desert you', 
+'Never gonna make you cry', 
+'Never gonna say goodbye', 
+'Never gonna tell a lie and hurt you', 
+'Never gonna stop']
+
+for i in range(int(input())):
+    s = input()
+    if s not in d:
+        print('Yes')
+        exit()
+print('No')'''
+
+
+'''for i in range(int(input())):
+    s, t = input().split('=')
+    if eval(s) == int(t):
+        print('correct')
+    else:
+        print('wrong answer')
+'''
+
+'''for i in range(int(input())):
+    n = int(input())
+    a1 = input().split()
+    a2 = input().split()
+    b2 = input().split()
+    b1 = [0]*n
+    d = []
+    for i in range(n):
+        d.append(a1.index(a2[i]))
+    # print(d)
+    for i in range(n):
+        b1[d[i]] = b2[i]
+    print(*b1)
+'''
+
+'''def fri(a, b):
+    for i in range(1, a+1):
+        if a%i==0 and b%i==0:
+            print(i, a//i, b//i)
+
+
+a, b = map(int, input().split())
+
+fri(a, b)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''def mod(a, b, c):
+    cnt = 0
+    for i in range(1, a+1):
+        for j in range(1, b+1):
+            for k in range(1, c+1):
+                if i%j == j%k == k%i:
+                    cnt+=1
+    print(cnt)
+
+
+for i in range(int(input())):
+    a, b, c = map(int, input().split())
+    mod(a, b, c)'''
+
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    s = list(input())
+    k = 0
+    while 1:
+        if s == s[::-1]:
+            break
+        if k == 0:
+            s.append(s[k])
+        else:
+            s.insert(-k, s[k])
+        k += 1
+    
+    for x in s:
+        print(x, end="")
+    print()'''
+
+'''a, b = input().split()
+print(str(int(a[::-1])+int(b[::-1]))[::-1].lstrip('0'))'''
+
+
+'''def xor(a, b, c):
+    if c == 0:
+        return a
+    a = (a and (not b)) or ((not a) and b)
+    c -= 1
+    return xor(a, b, c)
+
+a, b, c = map(int, input().split())
+
+# xor(a, b, c)
+print(xor(a, b, c))'''
+
+'''def p(x):
+    d = ['1','2','3','5','6','8','9','0']
+    for j in range(len(str(x))):
+        if str(x)[j] in d:
+            return
+    print(x)
+    a = 1
+    return a
+
+
+n = int(input())
+for i in range(n, 3, -1):
+    a = p(i)
+    if a == 1:
+        break
+'''
+'''
+t = int(input())
+for i in range(t):
+    r = input()
+    a, b = input().split()
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+  '''  
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+s = 0
+for i in range(0, n):
+    s += n*i+i
+print(s)'''
+
+'''n, m = map(int, input().split())
+
+d = []
+for i in range(n):
+    s = input().split()
+    d.append(s)
+for i in range(m):
+    s = input().split()
+    cnt = 0
+    for j in d:
+        if s[0] == j[0] or s[0] == '-':
+            if s[1] == j[1] or s[1] == '-':
+                if s[2] == j[2] or s[2] == '-':
+                    cnt += 1
+    print(cnt)'''
+
+'''p1 = 0
+p2 = 0
+p3 = 0
+A = [[0,1], [0,2], [0,3]]
+for i in range(int(input())):
+    a, b, c = map(int, input().split())
+    p1 += a; p2 += b; p3 += c
+    A[0][0] += a**2
+    A[1][0] += b**2
+    A[2][0] += c**2
+
+A = sorted(A)
+
+if A[2][0] == A[1][0]:
+    print(0, max(p1, p2, p3))
+else:
+    print(A[2][1], max(p1, p2, p3))'''
+
+'''d = sorted(list(map(int, input().split())))
+c = int(input())
+s = set()
+cnt = 0
+for i in d:
+    for j in d:
+        if i<=j and i+j==c:
+            if (i, j) not in s:
+                print(i, j)
+                cnt += 1
+                s.add((i, j))
+print(cnt)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = []
+n, m = map(int, input().split())
+for i in range(n):
+    n = int(input())
+    d.append(n)
+d = sorted(d)
+for i in range(m):
+    n = int(input())
+    if n in d:
+        print(d.index(n))
+    else:
+        print(-1)'''
+
+'''N = int(input())
+stack = []
+
+def push(_) :
+    stack.append(_)
+
+def pop() :
+    if len(stack) == 0 :
+        print(-1)
+    else :
+        print(stack.pop())
+
+def size() :
+    print(len(stack))
+
+def empty() :
+    if len(stack) == 0 :
+        print(1)
+    else :
+        print(0)
+
+def top() :
+    if len(stack) == 0 :
+        print(-1)
+    else :
+        print(stack[-1])
+
+
+for i in range(N) :
+    inputs = input()
+    if not inputs.find(' ') == -1 :
+        a, b = inputs.split()
+        b = int(b) 
+        if a == 'push' :
+            push(b)
+    else :
+        a = inputs
+        if a == 'pop' :
+            pop()
+        elif a == 'size' :
+            size()
+        elif a == 'empty' :
+            empty()
+        elif a == 'top' :
+            top()'''
+'''
+n, m = map(int, input().split())
+s = set()
+for i in range(n):
+    p = input()
+    s.add(p)
+cnt = 0
+for i in range(m):
+    p = input()
+    if p in s:
+        cnt += 1
+print(cnt)
+'''
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''from collections import deque
+queue = deque([])
+
+t = int(input())
+for i in range(t):
+    s = input()
+    if s[:4] == 'push':
+        queue.append(s[5:])
+    elif s == 'pop':
+        if len(queue)>0:
+            a = queue.popleft()
+            print(a)
+        else:
+            print(-1)
+    elif s == 'size':
+        print(len(queue))
+    elif s == 'front':
+        print(queue[0]) if len(queue)>0 else print(-1)
+    elif s == 'back':
+        print(queue[-1]) if len(queue)>0 else print(-1)
+    elif s == 'empty':
+        print(0) if len(queue)>0 else print(1)'''
+
+'''d = []
+d1 = []
+for i in range(int(input())):
+    a, b = map(int, input().split())
+    d.append([a, b])
+    d1.append(b)
+
+r = []
+
+for i in d:
+    cnt = 0
+    for j in d:
+        if i[0] < j[0] and i[1] < j[1]:
+            cnt += 1
+    r.append(cnt+1)
+
+print(*r)'''
+
+'''n, m = map(int, input().split())
+d1 = []
+for i in range(n):
+    l = list(map(int, input().split()))
+    d1.append(l)
+m, k = map(int, input().split())
+d2 = []
+for i in range(m):
+    l = list(map(int, input().split()))
+    d2.append(l)
+
+res = [[0 for x in range(k)] for x in range(n)]
+
+for i in range(n):
+    for j in range(k):
+        for h in range(m):
+            res[i][j] += d1[i][h] * d2[h][j]
+
+for i in res:
+    print(*i)'''
+
+'''n, m = map(int, input().split())
+d = []
+
+for i in range(n):
+    l = list(map(int, input().split()))
+    d.append(l)
+
+sx = []
+sy = []
+for i in range(n):
+    for j in range(m):
+        if d[i][j] == 1:
+            sx.append(i)
+            sy.append(j)
+# print(sx, sy)
+if sx[1] - sx[0] < 0:
+    x = -(sx[1] - sx[0])
+else:
+    x = sx[1] - sx[0]
+if sy[1] - sy[0] < 0:
+    y = -(sy[1] - sy[0])
+else:
+    y = sy[1] - sy[0]
+print(x+y)'''
+
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+'''t = set()
+for i in range(int(input())):
+    s = input().split()
+    if s[0] == 'add':
+        t.add(int(s[1]))
+    elif s[0] == 'remove':
+        t.discard(int(s[1]))
+    elif s[0] == 'check':
+        if int(s[1]) in t:
+            print(1)
+        else:
+            print(0)
+    elif s[0] == 'toggle':
+        if int(s[1]) in t:
+            t.discard(int(s[1]))
+        else:
+            t.add(int(s[1]))
+    elif s[0] == 'all':
+        t = set(range(1, 21))
+    elif s[0] == 'empty':
+        t = set()'''
+
+'''n, w, h, l = map(int, input().split())
+o = (w//l)*(h//l)
+print(min(n, o))'''
+
+'''n, m = map(int, input().split())
+
+d = []
+
+for i in range(m):
+    b = int(input())
+    book_list = list(map(int, input().split()))
+    d.append(book_list)
+
+
+stc = [0]
+sum = 1
+while sum>0:
+    for i in d:
+        if i[-1] == stc[-1] + 1:
+            stc.append(i[-1])
+            print(i.pop())
+
+print(stc)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''d = list(map(int, input().split()))
+d.sort()
+print(d[0]*d[2])
+
+
+if max(d[1] - d[0], d[2] - d[1]) // 2 + 1 not in d:
+    d[1] = max(d[1] - d[0], d[2] - d[1]) // 2 + 1
+
+print(d)'''
+# 0 1 1 0 0 1
+# 0 0 1 0 1 0 0 0 
+
+'''a, b, c = input().split()
+
+d = ['+', '-', '*', '//']
+
+for i in d:
+    s = a+i+b
+    if eval(s) == int(c):
+        if i == '//':
+            print(a+'/'+b+'='+c)
+        else:
+            print(s+'='+c)
+        exit()
+
+for i in d:
+    s = b+i+c
+    if eval(s) == int(a):
+        if i == '//':
+            print(a+'='+b+'/'+c)
+        else:
+            print(a+'='+s)
+        exit()'''
+
+'''def rR(p2):
+    if p2 == 'P':
+        # c2 += 1
+        return 1
+    elif p2 == 'S':
+        c1 += 1
+        return
+    else:
+        return
+
+def pR(p2):
+    if p2 == 'P':
+        return
+    elif p2 == 'S':
+        c2 += 1
+        return
+    else:
+        c1 += 1
+        return
+
+def sR(p2):
+    if p2 == 'P':
+        c1 += 1
+        return 1
+    elif p2 == 'S':
+        return
+    else:
+        c2 += 1
+        return
+
+for _ in range(int(input())):
+    c1 = 0; c2 = 0
+    for i in range(int(input())):
+        a, b = input().split()
+        if a == 'R':
+            c += rR(b)
+        elif a == 'P':
+            pR(b)
+        else:
+            sR(b)
+
+    print(c1, c2)'''
+
+'''while 1:
+    a = list(map(int, input().split()))
+    a.sort()
+    if a[0] == a[1] == a[2] == 0:
+        break
+    if a[0] == a[1] == a[2]:
+        print("Equilateral")
+    elif a[0] + a[1] > a[2]:
+        if ((a[0] == a[1]) and (a[1] != a[2])) or ((a[0] != a[1]) and (a[1] == a[2])) or ((a[0] == a[2]) and (a[0] != a[1])):
+            print("Isosceles")
+        else:
+            print("Scalene")
+    else:
+        print("Invalid")'''
+
+# n = int(input())
+
+'''if n%2==0:
+    r = round(n/2)
+    print((r+1)*(r+1))
+else:
+    r = n//2+1
+    print(r*(r+1))'''
+
+'''a, b, c = map(int, input().split('/'))
+if a + c < b or b ==:
+    print("hasu")
+else:
+    print("gosu")'''
+
+
+# n = int(input())
+# d = [0, 0]
+# for i in range(n):
+#     a, b = map(int, input().split())
+#     if a == b:
+#         continue
+#     elif a > b:
+#         d[0] += 1
+#     else:
+#         d[1] += 1
+
+# print(*d)
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    s = input()
+    res = ""
+    for j in range(len(s)):
+        if s[j] == 'Z':
+            res += 'A'
+        else:
+            res += chr(ord(s[j])+1)
+    print(f"String #{i+1}")
+    print(res)
+    print()'''
+
+'''v = input()
+v = input()
+
+a = v.count("A")
+b = v.count("B")
+if a == b:
+    print("Tie")
+elif a > b:
+    print("A")
+else:
+    print("B")'''
+
+'''for i in range(int(input())):
+    s = input()
+    if s[len(s)//2-1] == s[len(s)//2]:
+        print('Do-it')
+    else:
+        print('Do-it-Not')'''
+
+'''n = input()
+p = list(map(int, input().split()))
+pset = set(p)
+print(len(p)-len(pset))'''
+
+'''a, b = input().split()
+a = int(a)
+if b == 'miss':
+    print(0)
+elif b == 'bad':
+    print(200*a)
+elif b == 'cool':
+    print(400*a)
+elif b == 'great':
+    print(600*a)
+else:
+    print(1000*a)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''
+n = int(input())
+a = list(map(int, input().split()))
+c = (sum(a)+8*(n-1))
+print(c//24, c%24)'''
+
+'''a, b = map(int, input().split())
+cnt = 0
+for i in range(a):
+    for j in range(b):
+        if i+j == a and max(i, j) - min(i, j) == b:
+            print(max(i, j), min(i, j))
+            cnt = 1
+if cnt == 0:
+    print(-1)'''
+
+'''d = {'Algorithm': 204, 'DataAnalysis':207, 'ArtificialIntelligence':302, 'CyberSecurity':'B101', 'Network':303,
+'Startup':501, 'TestStrategy':105}
+
+for i in range(int(input())):
+    print(d[input()])'''
+
+
+'''for i in range(int(input())):
+    t = True
+    d = input()
+    s = []*50
+    for j in d:
+        if j == '(':
+            s.append(j)
+        elif j == ')':
+            if len(s) == 0:
+                print("NO")
+                t = False
+                break
+            else:
+                s.pop()
+    if t:
+        if len(s) == 0:
+            print('YES')
+        else:
+            print("NO")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''def p(a):
+    if a == ')' or a == '(':
+        return 0
+    elif a == '-' or a == '+':
+        return 1
+    else : return 2
+
+d = input()
+s = []
+
+for idx in d:
+    if idx == '(':
+        s.append(idx)
+    elif idx == ')':
+        while len(s) != 0:
+            op = s.pop()
+            if op == '(':
+                break
+            else: 
+                pass
+                print(op, end="")
+    elif idx in '+-*/':
+        while len(s) != 0:
+            op = s[-1]
+            if p(idx) <= p(op):
+                print(op, end="")
+                s.pop()
+            else: break
+        s.append(idx)
+
+    else:
+        print(idx, end="")
+
+while len(s) != 0:
+    print(s.pop(), end="")'''
+
+'''a = 5; b = 3
+
+def f(c):
+    n = 0
+    global a
+    a = c
+    if n < c:
+        n = a + c
+    return n
+
+def g(c):
+    n = 0
+    a = c
+    if n <f(c):
+        n = a + b
+    return n
+
+i = 1
+b = g(i)
+print("%d" %(a+b+i))'''
+
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''from collections import deque
+
+n = int(input())
+
+d = deque(range(1, n+1))
+while len(d) != 1:
+    d.popleft()
+    a = d.popleft()
+    d.append(a)
+
+print(d[0])'''
+
+'''while 1:
+    s = input()
+    if s == ".":
+        break
+    t = []
+    for i in s:
+        if i == '(':
+            t.append(i)
+        elif i == '[':
+            t.append(i)
+        elif i == ')':
+            if len(t) != 0:
+                if t[-1] == '(':
+                    t.pop()
+                else:
+                    continue
+        elif i == ']':
+            if len(t) != 0:
+                if t[-1] == '[':
+                    t.pop()
+                else:
+                    continue
+
+    if len(t):
+        print('no')
+    else:
+        print("yes")'''
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+s = list(input())
+i = 0
+while s:
+    if s[i] == ' ':
+        i += 1
+        continue
+    elif s[i] == '<':
+        t = []
+        while s[i] != '>':
+            print(s[i])
+            i += 1
+            t.append(i)
+print(t)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''def f(s):
+    t = []
+    for i in s:
+        if (i == '(') or (i == '['):
+            t.append(i)
+        elif (i == ']') or (i == ')'):
+            if len(t) == 0:
+                return 'no'
+            left = t.pop()
+            if ((i == ')') and (left != '(')) or ((i == ']') and (left != '[')):
+                return 'no'
+            
+    if len(t):
+        return 'no'
+    else:
+        return 'yes'
+    
+while 1:
+    s = input()
+    if s == ".":
+        break
+    print(f(s))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n1, n2 = map(int, input().split())
+m = int(input())
+o = int(input())
+if (n1*o+n2) <= (m*o) and n1 <= m:
+    print(1)
+else:
+    print(0)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''N = int(input())
+stack = []
+
+def push(_) :
+    stack.append(_)
+
+def pop() :
+    if len(stack) == 0 :
+        print(-1)
+    else :
+        print(stack.pop())
+
+def size() :
+    print(len(stack))
+
+def empty() :
+    if len(stack) == 0 :
+        print(1)
+    else :
+        print(0)
+
+def top() :
+    if len(stack) == 0 :
+        print(-1)
+    else :
+        print(stack[-1])
+
+
+for i in range(N) :
+    inputs = input()
+    if not inputs.find(' ') == -1 :
+        a, b = inputs.split()
+        b = int(b)
+        if a == '1' :
+            push(b)
+    else :
+        a = inputs
+        if a == '2' :
+            pop()
+        elif a == '3' :
+            size()
+        elif a == '4' :
+            empty()
+        elif a == '5' :
+            top()'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''n = int(input())
+a = list(map(int, input().split()))[::-1]
+d = []
+for i in range(len(a)):
+    cnt = 0
+    for j in a[i+1:]:
+        if a[i] <= j:
+            cnt = 1
+            d.append(a[::-1].index(j)+1)
+            break
+    if cnt == 0:
+        d.append(0)
+print(*d[::-1])'''
+
+'''n, m, k = map(int, input().split())
+print(k//m, k%m)'''
+
+"""for i in range(int(input())):
+    d, n, s, p = map(int, input().split())
+    if (d+p*n) == (n*s):
+        print("does not matter")
+    elif (d+p*n) > (n*s):
+        print("do not parallelize")
+    else:
+        print("parallelize")"""
+
+
+# eye, see
+# drop, water
+# man, shape, body, black
+# vase, bottle
+
+# 눈 인
+# 물 병
+
+# 
+
+'''import sys
+input = lambda: sys.stdin.readline().rstrip()
+'''
+'''while 1:
+    n = input()
+    if n == '0':
+        break
+    while 1:
+        if len(n) == 1:
+            print(n)
+            break
+        new = 0
+        for i in n:
+            new += int(i)
+        n = str(new)'''
+
+# b"as"s po"ta"to "sau"sage "c"heese
+# as ta sua c
+# castasua
+# pastasuace
+
+'''n = int(input())
+d = []
+d1 = []
+for i in range(n):
+    m = int(input())
+    d1.append(m)
+    if i == 0:
+        d.append(m)
+    elif d[-1] < m:
+        d.append(m)
+
+d1 = d1[::-1]
+d2 = []
+for i in range(n):
+    if i == 0:
+        d2.append(d1[i])
+    elif d2[-1] < d1[i]:
+        d2.append(d1[i])
+    
+print(len(d))
+print(len(d2))'''
+'''
+for i in range(int(input())):
+    s = input()
+    b = s.count('b')
+    b += s.count('B')
+    g = s.count('g')
+    g += s.count('G')
+    print(f"{s} is ", end="")
+    if b == g:
+        print('NEUTRAL')
+    elif b > g:
+        print('BADDY')
+    else:
+        print("GOOD")'''
+
+'''print(str(bin(int(input(),2)*17))[2:])'''
+
+'''d = {1:(12, 1600), 2:(11, 894), 3:(11, 1327), 4:(10, 1311), 5:(9, 1004), 6:(9, 1178),
+     7:(9, 1357), 8:(8, 837), 9:(7, 1055), 10:(6, 556), 11:(6, 773)}
+
+print(*d[int(input())])'''
+
+'''d = {}
+
+def pre(n):
+    print(n, end="")
+    if d[n][0] != '.':
+        pre(d[n][0])
+    if d[n][1] != '.':
+        pre(d[n][1])
+
+def mid(n):
+    if d[n][0] != '.':
+        mid(d[n][0])
+    print(n, end="")
+    if d[n][1] != '.':
+        mid(d[n][1])
+
+def post(n):
+    if d[n][0] != '.':
+        post(d[n][0])
+    if d[n][1] != '.':
+        post(d[n][1])
+    print(n, end="")
+
+for i in range(int(input())):
+    p, l, r = input().split()
+    d[p] = [l, r]
+
+pre('A')
+print()
+mid('A')
+print()
+post('A')'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''for i in range(int(input())):
+    st = []
+    s = input().split()
+    for j in s:
+        for k in j:
+            st.append(k)
+        for k in range(len(st)):
+            print(st.pop(), end="")
+        print(" ", end="")
+    print()'''
+
+# AB/C*D*E+
+# 0.5*3*4+5=11
+
+
+# st = []
+# s = input()
+# for j in s:
+#     if j == '<':
+#         if len(st)!=0:
+#             for k in range(len(st)):
+#                 print(st.pop(), end="")
+#                 # print(st)
+#         else:
+#             st.append(j)
+#             print(j, end="")
+#     elif j == '>':
+#         st.pop()
+#         print(j, end="")
+#     elif j == ' ':
+#         for k in range(len(st)):
+#             print(st.pop(), end="")
+#         print(' ', end="")
+#     else:
+#         if len(st) != 0:
+#             if st[-1] == '<':
+#                 print(j, end="")
+#                 continue
+#         st.append(j)
+
+'''n = int(input())
+m = int(input())
+print((n-m)//2+m)
+print((n-m)//2)'''
+
+
+'''st = []
+s = input()
+for i in s:
+    if st:
+        if i == '>':
+            st.pop()
+            print(i, end="")
+        elif i == '<':
+            for j in range(len(st)):
+                print(st.pop(), end="")
+            st.append(i)
+            print(i, end="")
+        elif st[-1] == '<':
+            print(i, end="")
+        elif i == ' ':
+            for j in range(len(st)):
+                print(st.pop(), end="")
+            print(' ', end="")
+        else:
+            st.append(i)
+    else:
+        if i == '<':
+            print(i, end="")
+        st.append(i)
+
+if st:
+    for j in range(len(st)):
+        print(st.pop(), end="")'''
+'''
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+'''
+'''while 1:
+    m, a, b = map(int, input().split())
+    if m == a == b == 0:
+        break
+    t = round((b - a) * m * 3600 / (a * b))
+    h = t // 3600
+    t = t % 3600
+    m = t // 60
+    s = t % 60
+    print('%01d:%02d:%02d' % (h, m, s))'''
+
+'''n, m, k = map(int, input().split())
+print(m*k+m)'''
+'''
+for i in range(int(input())):
+    s = set()
+    n = int(input())
+    for j in range(1, n//2+1):
+        if n - j != j:
+            s.add((j, n-j))
+    s = sorted(list(s))
+    if s:
+        print(f"Pairs for {n}:", end=" ")
+        for k in range(len(s)):
+            if k != len(s)-1:
+                print(*s[k], end=", ")
+            else:
+                print(*s[k])
+    else:
+        print(f"Pairs for {n}:")
+'''
+'''
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+books_list = []
+n, m = map(int, input().split())
+for i in range(m):
+    b = input()
+    books = list(map(int, input().split()))
+    books_list.append(books)
+
+def f():
+    d = [0]
+    while 1:
+        cnt = 0
+        tops = []
+        for i in books_list:
+            if i:
+                tops.append(i.pop())
+        for i in tops:
+            if d[-1] + 1 == i:
+                d.append(i)
+                cnt = 1
+        # print(d, tops)
+        if cnt == 0:
+            return "No"
+        if len(d) == n+1:
+            return "Yes"
+    return "No"
+
+print(f())'''
+
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''def f():
+    n, m = map(int, input().split())
+    for i in range(m):
+        b = int(input())
+        books = list(map(int, input().split()))
+        for i in range(b-1):
+            if books[i] < books[i+1]:
+                return "No"
+    return "Yes"
+print(f())'''
+
+'''for _ in range(int(input())):
+    n = input()
+    note1 = set(list(map(int, input().split())))
+    m = input()
+    note2 = list(map(int, input().split()))
+    for i in note2:
+        if i in note1:
+            print(1)
+        else:
+            print(0)'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+ 
+'''s = input()
+
+for i in range(len(s)):
+    if i != 0 and i%10 == 9:
+        print(s[i])
+    else:
+        print(s[i], end="")'''
+
+'''n = int(input())
+re = n + 2 * n + n
+print(int(input())*4)'''
+
+
+'''t = []
+while 1:
+    s = input()
+    if s == '=':
+        break
+    elif s == '+' or s == '-' or s == '/' or s == '*':
+        t.append(s)
+    else:
+        if len(t) == 0:
+            t.append(int(s))
+        else:
+            s = int(s)
+            x = t.pop()
+            y = t.pop()
+            if x == '+':
+                t.append(s+y)
+            elif x == '-':
+                t.append(y-s)
+            elif x == '*':
+                t.append(y*s)
+            else:
+                t.append(y//s)
+
+print(t[0])'''
+
+'''n = int(input())
+for i in range(n):
+    num = int(input())
+    if num%2 != 0:
+        print("odd")
+    else:
+        print("even")'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+'''
+while 1:
+    a, b = map(int, input().split())
+    if a == b == 0:
+        break
+    print(a//b, a%b, "/", b)'''
+
+'''
+def heappop(t):
+    size = len(t) - 1
+    if size == 0: return 0
+    p = 1; i = 2
+    root = t[1]
+    last = t[size] # 마지막 노드
+    while i <= size:
+        if i < size and t[i] > t[i+1]:
+            i += 1
+        if t[i] >= last: break
+        t[p] = t[i]
+        p = i
+        i = i * 2
+    
+    t[p] = last
+    t.pop()
+    return root
+
+
+t = [0]
+for i in range(int(input())):
+    n = int(input())
+    if len(t) == 1 and n == 0:
+        print(0)
+    else:
+        if n == 0:
+            print(heappop(t))
+        else:
+            t.append(n)
+            i = len(t) - 1 # n이 삽입될 위치
+            while i != 1 and n < t[i//2]:
+                t[i] = t[i//2]
+                i = i//2
+            t[i] = n'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+'''a, b, c = map(int, input().split())
+if a + b == c: print("correct!")
+else: print("wrong!")'''
+'''
+n = input()
+if '9' in n:  print("F")
+else: print("S")'''
+
+'''d = {'black':0, 'brown':1, 'red':2, 
+     'orange':3, 'yellow':4, 'green':5,
+     'blue': 6, 'violet': 7, 'grey': 8, 'white':9}
+a = input()
+b = input()
+c = input()
+print(int(str(d[a])+str(d[b]))*int('1'+'0'*d[c]))'''
+
+# import sys
+# input = lambda: sys.stdin.readline().rstrip()
+
+# n=input();print(sorted(list(map(int,input().split())))[-1])
+
+'''while 1:
+    n = int(input())
+    if n == 0:
+        break
+    sum = 0
+    for i in range(1,n+1):
+        sum+= i
+    print(sum)'''
+
+'''n = int(input())
+card_list = set(list(map(int,input().split())))
+m = int(input())
+sangn_list = list(map(int,input().split()))
+for i in sangn_list:
+    if i in card_list:
+        print(1,end=" ")
+    else:
+        print(0,end=" ")'''
+
+'''n=input()
+s=input()
+if 'gori' in s:print("YES")
+else:print("NO")'''
+
+'''s = set(input())
+if "M" in s and "O" in s and "B" in s and "I" in s and "S" in s:
+    print("YES")
+else:
+    print("NO")'''
+
+'''a, b, c = map(int, input().split())
+print((a+1)*(b+1)//(c+1)-1)'''
+
+'''n = int(input())
+print(1)
+print(n//2)'''
+
+'''n = int(input())
+print(n**2)
+print(2)'''
+
+'''n = int(input())
+print((n**2-n)//2)
+print(2)'''
+'''
+n = int(input())
+print((n)**3)
+print(3)'''
+
+'''ch = 1
+bi = 1
+n, a, b = map(int, input().split())
+for i in range(n):
+    ch += a
+    bi += b
+    if ch < bi :
+        bi, ch = ch, bi
+    elif ch == bi:
+        bi -= 1
+print(ch, bi)'''
+
+'''c=input()
+print(input().replace("I", "i").replace("l", "L"))'''
+'''
+n = int(input())
+if n<=32767 and n>=-32768:
+    print("short")
+elif n<=2147483647 and n>=-2147483648:
+    print("int")
+else:
+    print("long long")'''
+
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+'''cnt = 0
+y = input()
+n = input()
+for i in n:
+    if int(i)%2==0:
+        cnt += 1
+
+if cnt > len(n) - cnt:
+    print(0)
+elif cnt == len(n) - cnt:
+    print(-1)
+else:
+    print(1)'''
+
+'''t = ([([([1,2,3],),],)],)
+t[0][0][0][0][0][0] = 5
+print(t)
+
+t2 = (1, 2, 3)*100'''
+
+import pandas as pd
+s1 = pd.Series([20,21,23])        
+s2 = pd.Series(('남','여','남'))   
+s3 = pd.Series({'가':'이순신','나':'이영희','다':'김철수'})   #딕셔너리로 생성
+print(s1)
+print(s2)
+print(s3)
+
+print(s1.loc[1])
+print(s1.iloc[1])
+print(s3['가'])
+print(s3.loc['가'])
+# print(s3.loc[0])
+print(s3.iloc[0])        
+print(s3[['가','나','다']])  
+print(s3.loc[['가','나','다']])
+print(s3.iloc[[0,1,2]])

@@ -1,6 +1,3 @@
-# cd Desktop/python/pming2
-# python3 13011308.py
-
 import moduleZip.bangjungsick as ba
 import moduleZip.hamsu as ha
 import moduleZip.budngsick as bu
@@ -84,7 +81,6 @@ def manual():
 def main_reque():
     firstChoice = manual()
     # manual 함수를 호출해서 첫번 째 선택한 값을 firstChoice에 담는다.
-    # 만약 firstChoice가 int가 아닌 다른 자료형이 입력되면 빠져나갈 예외처리 구현 필요함.
 
         # 1: 이차방정식 선택
     if firstChoice == 1:
@@ -130,7 +126,7 @@ def main_reque():
         if answer == 'y':
             main_reque()
         elif answer == 'n':
-            print("\n감사합니다. 시스템을 종료합니다.")
+            print("\n\n감사합니다. 시스템을 종료합니다.")
         else:
             print("예상치 못한 입력으로 시스템을 종료합니다.")
 
@@ -150,3 +146,5 @@ def main_reque():
 
 #처음 실행하면 1회 호출.
 main_reque()
+
+# /usr/local/bin/python3 /Users/dgsw38/Desktop/python/pming2/1301_1308.py
